@@ -39,23 +39,17 @@
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                           <div class="col-md-8">
                             <input ng-model="user.username" id="username" name="username" type="text" placeholder="Enter username" class="form-control"  ng-minlength="5" required>
+                            <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">This field is invalid.</span>
+                            <span style="color:red" ng-show="myForm.username.$error.required">Username is required.</span>
+                            <span style="color:red" ng-show="myForm.username.$error.minlength">Minimum length required is 5.</span>
                             </div>
-                            <div class="has-error" ng-show="myForm.$dirty">
-                                      <span ng-show="myForm.uname.$error.required">This is a required field</span>
-                                      <span ng-show="myForm.uname.$error.minlength">Minimum length required is 5</span>
-                                      <span ng-show="myForm.uname.$invalid">This field is invalid </span>
-                                  </div>
-                          </div>
                           <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-street-view" style="font-size:36px"></i></span>
                             <div class="col-md-8">
                               <input ng-model="user.address" id="address" name="address" type="text" placeholder="Enter full address" class="form-control" ng-minlength="15" required>
-                              </div>
-                              <div class="has-error" ng-show="myForm.$dirty">
-                                      <span ng-show="myForm.uname.$error.required">This is a required field</span>
-                                      <span ng-show="myForm.uname.$error.minlength">Minimum length required is 15</span>
-                                      <span ng-show="myForm.uname.$invalid">This field is invalid </span>
-                                  </div>
+                              <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">This field is invalid.</span>
+                            <span style="color:red" ng-show="myForm.username.$error.required">Username is required.</span>
+                            <span style="color:red" ng-show="myForm.username.$error.minlength">Minimum length required is 15.</span>
                             </div>
                                     <div class="form-group">
                                       <div class="col-md-12 text-center">

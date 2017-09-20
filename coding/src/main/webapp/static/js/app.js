@@ -8,6 +8,10 @@ app.controller('userCtrl', function ($scope, userService) {
 	$scope.users = [];
 
 	$scope.updateUser = function () {
+    if ($scope.user.username == '' || $scope.user.address == '') {
+      //$scope.myForm.$setInvalid();  
+      return;
+    }
 		userService.updateUser($scope.user)
 		.then(
 			$scope.getAllUsers,
